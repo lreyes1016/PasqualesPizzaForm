@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parkinsans:wght@300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<title>Pasquale's Pizza Rewards | Layla Reyes, 2024</title>
+<script type="text/javascript">
+window.onload = function () {
+	document.getElementById("password1").onchange = validatePassword;
+	document.getElementById("password2").onchange = validatePassword;
+}
+function validatePassword(){
+var pass2=document.getElementById("password2").value;
+var pass1=document.getElementById("password1").value;
+if(pass1!=pass2)
+	document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+else
+	document.getElementById("password2").setCustomValidity('');	 
+//empty string means no validation error
+}
+</script>
+<style>
+body{
+margin:0;
+padding:0;
+background-color:#EFDFCF;
+display:block;
+background: url("pizza-bg.png") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+wrapper{
+width:1366px;
+margin:auto;
+display:block;
+background-color: rgba(34, 3, 25, 0.6);
+}	
+footer{
+padding:2px;
+color:#E6E6E6;
+font-family: "Rubik", sans-serif;
+background-color:#5F3A26;
+display:block;
+}
+h1{
+font-family: "Parkinsans", sans-serif;
+color:#C40000;
+text-align:center;
+padding:0;
+margin:0 auto;
+padding-top:20px;
+}
+h2{
+font-family: "Parkinsans", sans-serif;
+color:#9B674D;
+text-align:center;
+}
+input{
+border:none;
+padding:10px;
+padding-left:50px;
+padding-right:50px;
+margin-top:20px;
+margin-left:550px;
+}
+label{
+font-family: "Rubik", sans-serif;
+margin-left:600px;
+color:#f2f2f2;
+line-height:40px;
+}
+select{
+border:none;
+padding:10px;
+padding-left:
+text-align:center;
+margin-left:600px;
+}
+.submit{
+margin-left:580px;
+margin-bottom:20px;
+
+}
+.container {
+ display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eeeeee;
+margin-top:5px;
+margin-left:-35px;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #cccccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+	p{
+	margin-top:20px;	
+	}
+	
+button{
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+button:hover {
+  background-color: #f44336;
+  color: white;
+	}
+</style>
+</head>
+
+<body>
+<wrapper>
+  <header>
+</header>
+  <main>
+    <h1>PASQUALE'S PIZZA</h1>
+    <h2>Sign up for our rewards program!</h2>
+    <form action="confirm.html">
+      <section>
+        <div class="firstname">
+          <label>First Name</label><br>
+       <input type="text" required="required" placeholder="First Name"></div>
+		  <label>Last Name</label>
+			<input type="text" required="required" placeholder="Last Name">
+		  <label>Date of Birth</label>
+			<input type="date" required="required">
+		  <label>Phone Number</label>
+			<input type="tel" required="required" placeholder="(000) 000-0000" pattern="[\(][0-9]{3}[\)][\s][0-9]{3}[\-][0-9]{4}">
+		  <label>Address</label><br>
+			<input type="text" required="required" placeholder="Enter Street Address"> <br>
+		  
+</section>
+      <section class="section2">		
+		  <label>City</label> 
+		  <input type="text" required="required" placeholder="Enter city">
+	  <label>State</label>
+		  <select required="required" class="state">
+		    <option value="0">Select your state</option>
+		    <option value="1">FL</option>
+		    <option value="2">NY</option>
+		    <option value="3">CA</option>
+		    <option value="4">TX</option>
+			<option value="5">GA</option>
+</select>
+	    <br> <label>Zip Code</label> <br>
+		  <input type="number" required="required" placeholder="Zip Code" pattern="[0-9]{5}">
+	    <br> <label>Email</label> <br>
+		  <input type="email" required="required" placeholder="you@example.com">
+	   <br> <label>Password</label> <br>
+		  <input name="password1" type="password" required="required" id="password1" placeholder="Must consist of 6-12 uppercase and/or lowercase letters and/or numbers" pattern="[0-9A-Za-z]{6,12}">
+	    <br><label>Confirm Password</label> <br>
+		  <input name="password2" type="password" required="required" id="password2" placeholder="Must match original password">
+		  <label class="container"><p>I agree to the terms and conditions.</p>
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+		 <input type="submit" class="submit" value="Create Account">
+		</section>
+    </form>
+  </main>
+  <footer><footer>
+<p style="font-size:15px;">	© 2024, Layla Reyes</p>
+<p style="font-size:14px;">This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+</footer></footer>
+</wrapper>
+
+
+</body></html>
